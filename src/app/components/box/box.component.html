@@ -1,0 +1,14 @@
+<!-- Box with numbered tab on top and value display below -->
+<div [class]="'box' + (isActive() ? ' active' : '')" (click)="onBoxClick()">
+  <!-- Numbered tab header -->
+  <div class="box-tab">{{ boxId() }}</div>
+  @let option = selectedOption();
+
+  <!-- Value area -->
+  <div class="box-body">
+    <span [class]="option ? 'box-value': 'box-placeholder'">{{ option ? option.label: 'Select element' }}</span>
+  </div>
+  <div class="box-footer">
+    <span class="box-value">{{ option ? option.value : '' }}</span>
+  </div>
+</div>

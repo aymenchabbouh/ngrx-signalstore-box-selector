@@ -1,0 +1,81 @@
+/* Box component styles */
+:host {
+  display: block;
+  flex: 1;
+  min-width: 0;
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #d1d5db;
+  border-radius: 0;
+  cursor: pointer;
+  transition: background 0.15s ease;
+  overflow: hidden;
+  height: 100%;
+}
+
+/* Numbered tab at the top of each box */
+.box-tab {
+  background: #e5e7eb;
+  color: #6b7280;
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-align: center;
+  padding: 2px 0;
+  border-bottom: 1px solid #d1d5db;
+}
+
+/* Main content area of the box */
+.box-body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 50px;
+  padding: 0.25rem;
+  background: #fff;
+  flex: 1;
+}
+
+/* Active box — light green highlight */
+.box.active .box-body {
+  background: #d1fae5;
+}
+
+.box.active .box-tab {
+  background: #6ee7b7;
+  color: #065f46;
+}
+
+/* Selected value — large and bold */
+.box-value {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #111827;
+}
+
+/* Placeholder for empty boxes */
+.box-placeholder {
+  font-size: 0.75rem;
+  color: #9ca3af;
+}
+
+.box:hover .box-body {
+  background: #f3f4f6;
+}
+
+.box.active:hover .box-body {
+  background: #d1fae5;
+}
+
+.box-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 50px;
+  padding: 0.25rem;
+  background: #e5e7eb;
+  color: #6b7280;
+  border-top: 1px solid #d1d5db;
+}
