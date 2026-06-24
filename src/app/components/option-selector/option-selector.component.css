@@ -1,0 +1,59 @@
+/* Option selector styles */
+.selector-panel {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 1.5rem;
+  display: flex;
+  gap: 1.2rem;
+}
+
+.category {
+  display: block;
+  align-items: baseline;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.category-name {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #2563eb;
+  white-space: nowrap;
+  min-width: 90px;
+}
+
+.category-options {
+  display: grid;
+  gap: 0.35rem;
+  align-items: center;
+}
+
+/* Option buttons — symbol display */
+.option-btn {
+  background: #f9fafb;
+  border: 1px solid #d1d5db;
+  border-radius: 4px;
+  padding: 0.3rem 0.5rem;
+  color: #111827;
+  font-family: 'Inter', monospace;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.12s ease;
+  min-width: 36px;
+  text-align: center;
+  line-height: 1.3;
+}
+
+.option-btn:hover {
+  background: #e0f2fe;
+  border-color: #93c5fd;
+}
+
+/* Highlighted when this option is already selected for the active box */
+.option-btn.selected {
+  background: #ec4899;
+  border-color: #ec4899;
+  color: #fff;
+}

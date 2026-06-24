@@ -1,0 +1,18 @@
+<!-- Categorized options panel with symbol labels -->
+<div class="selector-panel">
+  @for (category of categories; track category.name) {
+  <div class="category">
+    <span class="category-name">{{ category.name }}:</span>
+    <div class="category-options"
+      [style.grid-template-columns]="'repeat(' + getColumnLimit(category.options.length) + ', 1fr)'">
+
+      @for (option of category.options; track option.id) {
+      <button type="button" [class]="'option-btn' + (currentOptionId() === option.id ? ' selected' : '')"
+        (click)="onOptionClick(option.id)">
+        {{ option.label }}
+      </button>
+      }
+    </div>
+  </div>
+  }
+</div>
